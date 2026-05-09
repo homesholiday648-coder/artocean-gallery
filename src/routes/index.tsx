@@ -59,42 +59,42 @@ function HomePage() {
   return (
     <div className="overflow-hidden">
       {/* HERO */}
-      <section ref={heroRef} className="relative min-h-[100svh] overflow-hidden">
-        <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
-        <Particles count={22} />
-
-        <motion.div
-          style={{ y, scale }}
-          className="absolute inset-0 flex items-center justify-center"
-        >
+      <section ref={heroRef} className="relative min-h-[100svh] overflow-hidden bg-vandyke text-isabelline">
+        {/* Banner image */}
+        <motion.div style={{ y, scale }} className="absolute inset-0">
           <motion.img
             src={hero}
             alt="Handmade couple sculpture"
-            className="h-[110%] w-auto max-w-none object-contain animate-float-slow opacity-90"
+            className="h-full w-full object-cover"
             initial={{ opacity: 0, scale: 1.1 }}
-            animate={{ opacity: 0.9, scale: 1 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.6, ease: "easeOut" }}
           />
+          {/* Cinematic overlays for legibility */}
+          <div className="absolute inset-0 bg-gradient-to-r from-vandyke/95 via-vandyke/70 to-vandyke/30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-vandyke via-vandyke/40 to-transparent" />
         </motion.div>
+
+        <Particles count={22} />
 
         <motion.div
           style={{ opacity }}
-          className="relative z-10 mx-auto flex min-h-[100svh] max-w-7xl flex-col items-center justify-center px-6 pt-32 text-center"
+          className="relative z-10 mx-auto flex min-h-[100svh] max-w-7xl flex-col items-start justify-center px-6 pt-32 text-left md:pt-24"
         >
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="mb-6 inline-flex items-center gap-2 rounded-full border border-vandyke/15 bg-isabelline/60 px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-vandyke backdrop-blur"
+            className="mb-6 inline-flex items-center gap-2 rounded-full border border-isabelline/25 bg-isabelline/10 px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-isabelline backdrop-blur"
           >
-            <Sparkles size={12} className="text-reseda" />
+            <Sparkles size={12} className="text-lavender" />
             Handmade Luxury Art
           </motion.div>
 
-          <h1 className="max-w-5xl font-display text-5xl font-light leading-[1.05] tracking-tight text-balance text-foreground sm:text-7xl md:text-[88px]">
+          <h1 className="max-w-3xl font-display text-5xl font-light leading-[1.05] tracking-tight text-balance text-isabelline sm:text-7xl md:text-[88px]">
             <SplitWords text="Turning Memories Into" />
             <br />
-            <span className="font-script italic shimmer-text" style={{ fontWeight: 400 }}>
+            <span className="font-script italic text-lavender" style={{ fontWeight: 400 }}>
               Timeless Art
             </span>
           </h1>
@@ -103,7 +103,7 @@ function HomePage() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="mt-8 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg"
+            className="mt-8 max-w-xl text-base leading-relaxed text-isabelline/80 sm:text-lg"
           >
             Luxury handmade sculptures, paintings & personalised artwork crafted with passion —
             shipped worldwide.
@@ -113,18 +113,18 @@ function HomePage() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.85, duration: 0.8 }}
-            className="mt-10 flex flex-wrap items-center justify-center gap-3"
+            className="mt-10 flex flex-wrap items-center gap-3"
           >
             <Link
               to="/shop"
-              className="btn-shine group inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground transition hover:opacity-90"
+              className="btn-shine group inline-flex items-center gap-2 rounded-full bg-isabelline px-7 py-3.5 text-sm font-medium text-vandyke transition hover:bg-lavender"
             >
               Explore Collection
               <ArrowRight size={16} className="transition group-hover:translate-x-1" />
             </Link>
             <Link
               to="/custom"
-              className="inline-flex items-center gap-2 rounded-full border border-vandyke/20 bg-isabelline/40 px-7 py-3.5 text-sm font-medium text-foreground backdrop-blur transition hover:bg-isabelline/80"
+              className="inline-flex items-center gap-2 rounded-full border border-isabelline/30 bg-isabelline/5 px-7 py-3.5 text-sm font-medium text-isabelline backdrop-blur transition hover:bg-isabelline/15"
             >
               Customize Your Artwork
             </Link>
@@ -134,7 +134,7 @@ function HomePage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.4 }}
-            className="absolute bottom-8 left-1/2 -translate-x-1/2 text-[10px] uppercase tracking-[0.4em] text-muted-foreground"
+            className="absolute bottom-8 left-1/2 -translate-x-1/2 text-[10px] uppercase tracking-[0.4em] text-isabelline/60"
           >
             scroll to discover
           </motion.div>
