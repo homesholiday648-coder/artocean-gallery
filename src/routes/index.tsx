@@ -4,6 +4,14 @@ import { useRef, useState } from "react";
 import { ArrowRight, Heart, Instagram, MessageCircle, Sparkles, Star } from "lucide-react";
 import hero from "@/assets/hero-sculpture.jpg";
 import process from "@/assets/artist-process.jpg";
+import imgSingle from "@/assets/product-single.jpg";
+import imgCouple from "@/assets/product-couple.jpg";
+import imgFamily from "@/assets/product-family.jpg";
+import imgAction from "@/assets/product-action.jpg";
+import imgGroup from "@/assets/product-group.jpg";
+import imgPainting from "@/assets/product-painting.jpg";
+import imgCalligraphy from "@/assets/product-calligraphy.jpg";
+import imgSketch from "@/assets/product-sketch.jpg";
 import { Particles } from "@/components/site/Particles";
 import { Reveal, SplitWords } from "@/components/site/Reveal";
 import { ProductCard } from "@/components/site/ProductCard";
@@ -24,13 +32,14 @@ export const Route = createFileRoute("/")({
 });
 
 const collections = [
-  { title: "Single Mini Sculpture", desc: "A single soul, sculpted in stillness.", slug: "single-mini-sculpture" },
-  { title: "Couple Mini Sculpture", desc: "Two figures, one quiet embrace.", slug: "couple-mini-sculpture" },
-  { title: "Family Sculpture", desc: "An heirloom for generations.", slug: "family-sculpture" },
-  { title: "Action Figure Sculpture", desc: "A heroic stance frozen in time.", slug: "action-figure-sculpture" },
-  { title: "Handmade Paintings", desc: "Hand-mixed pigments on linen.", slug: "abstract-handmade-painting" },
-  { title: "Calligraphy Art", desc: "Ink, paper & silence.", slug: "calligraphy-art" },
-  { title: "Sketch Art", desc: "Graphite portraits, soft and soulful.", slug: "sketch-portrait" },
+  { title: "Single Mini Sculpture", desc: "A single soul, sculpted in stillness.", slug: "single-mini-sculpture", img: imgSingle },
+  { title: "Couple Mini Sculpture", desc: "Two figures, one quiet embrace.", slug: "couple-mini-sculpture", img: imgCouple },
+  { title: "Family Sculpture", desc: "An heirloom for generations.", slug: "family-sculpture", img: imgFamily },
+  { title: "Wedding Couple", desc: "Heritage attire, hand-painted.", slug: "wedding-couple-sculpture", img: imgAction },
+  { title: "Group / Friends", desc: "Celebrate your circle.", slug: "group-friends-sculpture", img: imgGroup },
+  { title: "Handmade Paintings", desc: "Hand-mixed pigments on linen.", slug: "abstract-handmade-painting", img: imgPainting },
+  { title: "Calligraphy Art", desc: "Ink, paper & silence.", slug: "calligraphy-art", img: imgCalligraphy },
+  { title: "Sketch Art", desc: "Graphite portraits, soft and soulful.", slug: "sketch-portrait", img: imgSketch },
 ];
 
 const steps = [
@@ -231,16 +240,25 @@ function HomePage() {
                 <Link
                   to="/shop/$slug"
                   params={{ slug: c.slug }}
-                  className="group hover-lift relative flex h-64 flex-col justify-end overflow-hidden rounded-2xl bg-gradient-to-br from-vandyke/90 to-reseda/90 p-7 text-isabelline noise"
+                  className="group hover-lift relative flex h-72 flex-col justify-end overflow-hidden rounded-2xl bg-vandyke p-7 text-isabelline noise"
                 >
-                  <div className="absolute right-4 top-4 grid h-9 w-9 place-items-center rounded-full bg-isabelline/15 backdrop-blur transition group-hover:rotate-45">
+                  <img
+                    src={c.img}
+                    alt={c.title}
+                    className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-110"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-vandyke via-vandyke/60 to-vandyke/10" />
+                  <div className="absolute right-4 top-4 z-10 grid h-9 w-9 place-items-center rounded-full bg-isabelline/20 backdrop-blur transition group-hover:rotate-45">
                     <ArrowRight size={15} />
                   </div>
-                  <h3 className="font-display text-2xl font-light">{c.title}</h3>
-                  <p className="mt-1 max-w-xs text-sm text-isabelline/80">{c.desc}</p>
-                  <span className="mt-5 inline-flex w-fit rounded-full border border-isabelline/30 px-4 py-1.5 text-[10px] uppercase tracking-widest transition group-hover:bg-isabelline group-hover:text-vandyke">
-                    Customize Now
-                  </span>
+                  <div className="relative z-10">
+                    <h3 className="font-display text-2xl font-light">{c.title}</h3>
+                    <p className="mt-1 max-w-xs text-sm text-isabelline/80">{c.desc}</p>
+                    <span className="mt-5 inline-flex w-fit rounded-full border border-isabelline/40 bg-vandyke/30 px-4 py-1.5 text-[10px] uppercase tracking-widest backdrop-blur transition group-hover:bg-isabelline group-hover:text-vandyke">
+                      Customize Now
+                    </span>
+                  </div>
                 </Link>
               </Reveal>
             ))}
