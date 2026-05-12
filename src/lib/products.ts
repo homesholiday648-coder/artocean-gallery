@@ -2,6 +2,7 @@ import single from "@/assets/product-single.jpg";
 import couple from "@/assets/product-couple.jpg";
 import family from "@/assets/product-family.jpg";
 import action from "@/assets/product-action.jpg";
+import group from "@/assets/product-group.jpg";
 import painting from "@/assets/product-painting.jpg";
 import calligraphy from "@/assets/product-calligraphy.jpg";
 import sketch from "@/assets/product-sketch.jpg";
@@ -25,7 +26,7 @@ export const products: Product[] = [
     image: single,
     rating: 4.9,
     description:
-      "A delicate handcrafted figurine — sculpted to capture a single soul in stillness. Each piece is shaped, fired and hand-finished in our studio.",
+      "A delicate handcrafted figurine — sculpted to capture a single soul in stillness. Each piece is shaped, painted and hand-finished in our studio from your reference photo.",
     badge: "Bestseller",
   },
   {
@@ -36,7 +37,7 @@ export const products: Product[] = [
     price: 89,
     image: couple,
     rating: 5.0,
-    description: "Two figures, one quiet embrace. A timeless keepsake of love sculpted from clay.",
+    description: "Two figures, one quiet embrace. A handmade keepsake of love sculpted in clay from your photo.",
     badge: "Limited",
   },
   {
@@ -44,20 +45,31 @@ export const products: Product[] = [
     slug: "family-sculpture",
     title: "Family Sculpture",
     category: "Sculpture",
-    price: 129,
+    price: 199,
     image: family,
-    rating: 4.8,
-    description: "A heirloom for your family — every figure individually formed and unified on a single base.",
+    rating: 4.9,
+    description: "A heirloom for your whole family — every figure individually sculpted and unified on a single acrylic base.",
+    badge: "Heirloom",
   },
   {
     id: "p4",
-    slug: "action-figure-sculpture",
-    title: "Action Figure Sculpture",
+    slug: "wedding-couple-sculpture",
+    title: "Wedding Couple — Heritage",
     category: "Sculpture",
-    price: 119,
+    price: 149,
     image: action,
-    rating: 4.7,
-    description: "A heroic stance, frozen in time. Custom-posed action figures crafted with cinematic detail.",
+    rating: 4.9,
+    description: "A bespoke wedding couple in traditional attire, hand-painted with intricate embroidery detail.",
+  },
+  {
+    id: "p9",
+    slug: "group-friends-sculpture",
+    title: "Group / Friends Sculpture",
+    category: "Sculpture",
+    price: 169,
+    image: group,
+    rating: 4.8,
+    description: "Celebrate your circle — a group set of figurines on a custom themed base, made entirely by hand.",
   },
   {
     id: "p5",
