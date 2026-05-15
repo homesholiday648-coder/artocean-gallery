@@ -126,7 +126,7 @@
     text-rendering: optimizeLegibility;
   }
 
-  ::selection { background: color-mix(in oklab, var(--lavender) 60%, transparent); color: var(--vandyke); }
+  ::selection { background: color-mix(in oklab, var(--reseda) 70%, transparent); color: var(--vandyke); }
 
   /* Custom cursor glow */
   .cursor-glow {
