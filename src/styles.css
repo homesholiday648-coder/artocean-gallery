@@ -42,16 +42,16 @@
   --color-vandyke: var(--vandyke);
   --color-isabelline: var(--isabelline);
 
-  --shadow-soft: 0 10px 40px -12px color-mix(in oklab, var(--vandyke) 18%, transparent);
-  --shadow-elegant: 0 30px 80px -30px color-mix(in oklab, var(--vandyke) 35%, transparent);
-  --shadow-glow: 0 0 60px -10px color-mix(in oklab, var(--reseda) 35%, transparent);
+  --shadow-soft: 0 10px 40px -12px color-mix(in oklab, var(--reseda) 30%, transparent);
+  --shadow-elegant: 0 30px 80px -30px color-mix(in oklab, var(--reseda) 40%, transparent);
+  --shadow-glow: 0 0 60px -10px color-mix(in oklab, var(--reseda) 55%, transparent);
 
   --gradient-hero: radial-gradient(120% 80% at 50% 0%,
-    color-mix(in oklab, var(--lavender) 18%, transparent) 0%,
+    color-mix(in oklab, var(--reseda) 35%, transparent) 0%,
     transparent 60%),
-    linear-gradient(180deg, var(--background), color-mix(in oklab, var(--vandyke) 8%, var(--background)));
-  --gradient-warm: linear-gradient(135deg, var(--vandyke), color-mix(in oklab, var(--vandyke) 60%, var(--reseda)));
-  --gradient-soft: linear-gradient(135deg, var(--isabelline), color-mix(in oklab, var(--lavender) 25%, var(--isabelline)));
+    linear-gradient(180deg, var(--background), color-mix(in oklab, var(--reseda) 12%, var(--background)));
+  --gradient-warm: linear-gradient(135deg, color-mix(in oklab, var(--reseda) 80%, white), var(--reseda));
+  --gradient-soft: linear-gradient(135deg, var(--isabelline), color-mix(in oklab, var(--reseda) 35%, var(--isabelline)));
 }
 
 :root {
