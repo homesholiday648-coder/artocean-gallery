@@ -296,6 +296,23 @@ function HomePage() {
         <QuickView product={quick} onClose={() => setQuick(null)} />
       </section>
 
+      {/* SHOP BY COLLECTION — CAROUSEL ROWS */}
+      <section className="bg-card py-32">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="mb-16 max-w-2xl">
+            <span className="text-[10px] font-medium uppercase tracking-[0.3em] text-reseda">Shop by Collection</span>
+            <Reveal as="h2" className="mt-3 font-display text-4xl font-light leading-tight tracking-tight sm:text-5xl">
+              Browse every collection, side by side.
+            </Reveal>
+          </div>
+          <CategoryRow eyebrow="Collection 01" title="Single Mini Sculptures" products={singles} onQuickView={setQuick} />
+          <CategoryRow eyebrow="Collection 02" title="Couple Sculptures" products={couples} onQuickView={setQuick} />
+          <CategoryRow eyebrow="Collection 03" title="Family Sculptures" products={families} onQuickView={setQuick} />
+          <CategoryRow eyebrow="Collection 04" title="Sketch Art" products={sketches} onQuickView={setQuick} />
+          <CategoryRow eyebrow="Collection 05" title="Oil Paintings" products={oils} onQuickView={setQuick} />
+        </div>
+      </section>
+
       {/* CUSTOM PROCESS */}
       <section
         className="relative overflow-hidden py-32 text-isabelline"
