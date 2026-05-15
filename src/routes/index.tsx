@@ -2,8 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState } from "react";
 import { ArrowRight, Heart, Instagram, MessageCircle, Sparkles, Star } from "lucide-react";
-import hero from "@/assets/hero-sculpture.jpg";
-import process from "@/assets/artist-process.jpg";
+import hero from "@/assets/artist-hero.jpg";
+import process from "@/assets/artist-portrait.jpg";
 import imgSingle from "@/assets/product-single.jpg";
 import imgCouple from "@/assets/product-couple.jpg";
 import imgFamily from "@/assets/product-family.jpg";
@@ -15,6 +15,7 @@ import imgSketch from "@/assets/product-sketch.jpg";
 import { Particles } from "@/components/site/Particles";
 import { Reveal, SplitWords } from "@/components/site/Reveal";
 import { ProductCard } from "@/components/site/ProductCard";
+import { CategoryRow } from "@/components/site/CategoryRow";
 import { QuickView } from "@/components/site/QuickView";
 import { products } from "@/lib/products";
 import type { Product } from "@/lib/store";
@@ -65,6 +66,12 @@ function HomePage() {
   const [quick, setQuick] = useState<Product | null>(null);
   const featured = products.slice(0, 4);
 
+  const singles = products.filter((p) => p.category === "Single" || p.slug === "single-mini-sculpture");
+  const couples = products.filter((p) => p.category === "Couple" || p.slug === "couple-mini-sculpture");
+  const families = products.filter((p) => p.category === "Family" || ["family-sculpture", "group-friends-sculpture"].includes(p.slug));
+  const sketches = products.filter((p) => p.category === "Sketch");
+  const oils = products.filter((p) => p.category === "Oil Painting" || p.category === "Painting");
+
   return (
     <div className="overflow-hidden">
       {/* HERO */}
@@ -80,8 +87,8 @@ function HomePage() {
             transition={{ duration: 1.6, ease: "easeOut" }}
           />
           {/* Cinematic overlays for legibility */}
-          <div className="absolute inset-0 bg-gradient-to-r from-vandyke/95 via-vandyke/70 to-vandyke/30" />
-          <div className="absolute inset-0 bg-gradient-to-t from-vandyke via-vandyke/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-vandyke/85 via-vandyke/55 to-vandyke/10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-vandyke/90 via-vandyke/30 to-transparent" />
         </motion.div>
 
         <Particles count={22} />
@@ -287,6 +294,23 @@ function HomePage() {
           </Link>
         </div>
         <QuickView product={quick} onClose={() => setQuick(null)} />
+      </section>
+
+      {/* SHOP BY COLLECTION — CAROUSEL ROWS */}
+      <section className="bg-card py-32">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="mb-16 max-w-2xl">
+            <span className="text-[10px] font-medium uppercase tracking-[0.3em] text-reseda">Shop by Collection</span>
+            <Reveal as="h2" className="mt-3 font-display text-4xl font-light leading-tight tracking-tight sm:text-5xl">
+              Browse every collection, side by side.
+            </Reveal>
+          </div>
+          <CategoryRow eyebrow="Collection 01" title="Single Mini Sculptures" products={singles} onQuickView={setQuick} />
+          <CategoryRow eyebrow="Collection 02" title="Couple Sculptures" products={couples} onQuickView={setQuick} />
+          <CategoryRow eyebrow="Collection 03" title="Family Sculptures" products={families} onQuickView={setQuick} />
+          <CategoryRow eyebrow="Collection 04" title="Sketch Art" products={sketches} onQuickView={setQuick} />
+          <CategoryRow eyebrow="Collection 05" title="Oil Paintings" products={oils} onQuickView={setQuick} />
+        </div>
       </section>
 
       {/* CUSTOM PROCESS */}
