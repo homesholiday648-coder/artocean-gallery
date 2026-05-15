@@ -202,7 +202,7 @@
     100% { background-position: 200% 0; }
   }
   .shimmer-text {
-    background: linear-gradient(90deg, var(--vandyke) 0%, var(--reseda) 40%, var(--lavender) 50%, var(--reseda) 60%, var(--vandyke) 100%);
+    background: linear-gradient(90deg, var(--vandyke) 0%, var(--reseda) 40%, color-mix(in oklab, var(--reseda) 60%, white) 50%, var(--reseda) 60%, var(--vandyke) 100%);
     background-size: 200% auto;
     -webkit-background-clip: text; background-clip: text; color: transparent;
     animation: shimmer 6s linear infinite;
