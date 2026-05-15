@@ -6,6 +6,12 @@ import group from "@/assets/product-group.jpg";
 import painting from "@/assets/product-painting.jpg";
 import calligraphy from "@/assets/product-calligraphy.jpg";
 import sketch from "@/assets/product-sketch.jpg";
+import realA from "@/assets/real-a.jpg";
+import realB from "@/assets/real-b.jpg";
+import realC from "@/assets/real-c.jpg";
+import realCoupleRed from "@/assets/real-couple-red.jpg";
+import realCoupleTrad from "@/assets/real-couple-traditional.jpg";
+import realTrio from "@/assets/real-trio-figures.jpg";
 import type { Product } from "./store";
 
 export const CATEGORIES = [
