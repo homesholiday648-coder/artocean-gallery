@@ -20,7 +20,7 @@ export function CategoryRow({
       <div className="mb-8 flex items-end justify-between gap-6">
         <div>
           <span className="text-[10px] font-medium uppercase tracking-[0.3em] text-reseda">{eyebrow}</span>
-          <Reveal as="h3" className="mt-2 font-display text-3xl font-light tracking-tight sm:text-4xl">
+          <Reveal as="h2" className="mt-2 font-display text-3xl font-light tracking-tight sm:text-4xl">
             {title}
           </Reveal>
         </div>
