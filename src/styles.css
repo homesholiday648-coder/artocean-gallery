@@ -42,61 +42,61 @@
   --color-vandyke: var(--vandyke);
   --color-isabelline: var(--isabelline);
 
-  --shadow-soft: 0 10px 40px -12px color-mix(in oklab, var(--vandyke) 18%, transparent);
-  --shadow-elegant: 0 30px 80px -30px color-mix(in oklab, var(--vandyke) 35%, transparent);
-  --shadow-glow: 0 0 60px -10px color-mix(in oklab, var(--reseda) 35%, transparent);
+  --shadow-soft: 0 10px 40px -12px color-mix(in oklab, var(--reseda) 30%, transparent);
+  --shadow-elegant: 0 30px 80px -30px color-mix(in oklab, var(--reseda) 40%, transparent);
+  --shadow-glow: 0 0 60px -10px color-mix(in oklab, var(--reseda) 55%, transparent);
 
   --gradient-hero: radial-gradient(120% 80% at 50% 0%,
-    color-mix(in oklab, var(--lavender) 18%, transparent) 0%,
+    color-mix(in oklab, var(--reseda) 35%, transparent) 0%,
     transparent 60%),
-    linear-gradient(180deg, var(--background), color-mix(in oklab, var(--vandyke) 8%, var(--background)));
-  --gradient-warm: linear-gradient(135deg, var(--vandyke), color-mix(in oklab, var(--vandyke) 60%, var(--reseda)));
-  --gradient-soft: linear-gradient(135deg, var(--isabelline), color-mix(in oklab, var(--lavender) 25%, var(--isabelline)));
+    linear-gradient(180deg, var(--background), color-mix(in oklab, var(--reseda) 12%, var(--background)));
+  --gradient-warm: linear-gradient(135deg, color-mix(in oklab, var(--reseda) 80%, white), var(--reseda));
+  --gradient-soft: linear-gradient(135deg, var(--isabelline), color-mix(in oklab, var(--reseda) 35%, var(--isabelline)));
 }
 
 :root {
   --radius: 0.75rem;
 
   /* Brand — White / Baby Pink / Blue */
-  --reseda: oklch(0.82 0.09 8);           /* baby pink highlight */
-  --lavender: oklch(0.62 0.16 250);       /* blue accent */
-  --vandyke: oklch(0.27 0.09 255);        /* deep navy blue (dark sections) */
+  --reseda: oklch(0.84 0.10 8);            /* baby pink (primary highlight) */
+  --lavender: oklch(0.9 0.05 10);          /* soft pink wash (was blue) */
+  --vandyke: oklch(0.32 0.08 350);         /* deep plum/rose for text */
   --isabelline: oklch(1 0 0);              /* pure white */
 
-  --background: oklch(1 0 0);              /* white */
+  --background: oklch(1 0 0);
   --foreground: var(--vandyke);
-  --card: oklch(0.985 0.004 80);
+  --card: oklch(0.99 0.005 10);
   --card-foreground: var(--vandyke);
-  --popover: oklch(0.99 0.003 80);
+  --popover: oklch(0.995 0.003 10);
   --popover-foreground: var(--vandyke);
-  --primary: var(--vandyke);
-  --primary-foreground: var(--isabelline);
-  --secondary: var(--reseda);
-  --secondary-foreground: var(--isabelline);
-  --muted: oklch(0.93 0.008 80);
-  --muted-foreground: oklch(0.45 0.025 50);
-  --accent: var(--lavender);
+  --primary: var(--reseda);
+  --primary-foreground: var(--vandyke);
+  --secondary: oklch(0.96 0.025 10);
+  --secondary-foreground: var(--vandyke);
+  --muted: oklch(0.96 0.012 10);
+  --muted-foreground: oklch(0.5 0.04 350);
+  --accent: var(--reseda);
   --accent-foreground: var(--vandyke);
   --destructive: oklch(0.55 0.2 27);
   --destructive-foreground: var(--isabelline);
-  --border: oklch(0.88 0.01 80);
-  --input: oklch(0.9 0.008 80);
+  --border: oklch(0.9 0.02 10);
+  --input: oklch(0.92 0.015 10);
   --ring: var(--reseda);
 }
 
 .dark {
-  --background: oklch(0.18 0.025 260);
+  --background: oklch(0.2 0.03 350);
   --foreground: var(--isabelline);
-  --card: oklch(0.235 0.03 260);
+  --card: oklch(0.25 0.035 350);
   --card-foreground: var(--isabelline);
-  --popover: oklch(0.235 0.03 260);
+  --popover: oklch(0.25 0.035 350);
   --popover-foreground: var(--isabelline);
   --primary: var(--reseda);
   --primary-foreground: var(--vandyke);
-  --secondary: var(--lavender);
+  --secondary: oklch(0.3 0.04 350);
   --secondary-foreground: var(--isabelline);
-  --muted: oklch(0.28 0.025 260);
-  --muted-foreground: oklch(0.78 0.02 260);
+  --muted: oklch(0.3 0.03 350);
+  --muted-foreground: oklch(0.82 0.025 10);
   --accent: var(--reseda);
   --accent-foreground: var(--vandyke);
   --destructive: oklch(0.6 0.22 27);
@@ -126,7 +126,7 @@
     text-rendering: optimizeLegibility;
   }
 
-  ::selection { background: color-mix(in oklab, var(--lavender) 60%, transparent); color: var(--vandyke); }
+  ::selection { background: color-mix(in oklab, var(--reseda) 70%, transparent); color: var(--vandyke); }
 
   /* Custom cursor glow */
   .cursor-glow {
@@ -134,7 +134,7 @@
     pointer-events: none;
     width: 480px; height: 480px;
     border-radius: 9999px;
-    background: radial-gradient(circle, color-mix(in oklab, var(--lavender) 25%, transparent) 0%, transparent 60%);
+    background: radial-gradient(circle, color-mix(in oklab, var(--reseda) 35%, transparent) 0%, transparent 60%);
     transform: translate(-50%, -50%);
     z-index: 1;
     mix-blend-mode: multiply;
@@ -150,7 +150,7 @@
   .text-balance { text-wrap: balance; }
 
   .gradient-text {
-    background: linear-gradient(120deg, var(--vandyke), var(--reseda) 60%, var(--lavender));
+    background: linear-gradient(120deg, var(--vandyke), var(--reseda) 55%, color-mix(in oklab, var(--reseda) 70%, white));
     -webkit-background-clip: text; background-clip: text; color: transparent;
   }
 
@@ -202,7 +202,7 @@
     100% { background-position: 200% 0; }
   }
   .shimmer-text {
-    background: linear-gradient(90deg, var(--vandyke) 0%, var(--reseda) 40%, var(--lavender) 50%, var(--reseda) 60%, var(--vandyke) 100%);
+    background: linear-gradient(90deg, var(--vandyke) 0%, var(--reseda) 40%, color-mix(in oklab, var(--reseda) 60%, white) 50%, var(--reseda) 60%, var(--vandyke) 100%);
     background-size: 200% auto;
     -webkit-background-clip: text; background-clip: text; color: transparent;
     animation: shimmer 6s linear infinite;
