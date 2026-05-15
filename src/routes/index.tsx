@@ -66,6 +66,12 @@ function HomePage() {
   const [quick, setQuick] = useState<Product | null>(null);
   const featured = products.slice(0, 4);
 
+  const singles = products.filter((p) => p.category === "Single" || p.slug === "single-mini-sculpture");
+  const couples = products.filter((p) => p.category === "Couple" || p.slug === "couple-mini-sculpture");
+  const families = products.filter((p) => p.category === "Family" || ["family-sculpture", "group-friends-sculpture"].includes(p.slug));
+  const sketches = products.filter((p) => p.category === "Sketch");
+  const oils = products.filter((p) => p.category === "Oil Painting" || p.category === "Painting");
+
   return (
     <div className="overflow-hidden">
       {/* HERO */}
