@@ -150,7 +150,7 @@
   .text-balance { text-wrap: balance; }
 
   .gradient-text {
-    background: linear-gradient(120deg, var(--vandyke), var(--reseda) 60%, var(--lavender));
+    background: linear-gradient(120deg, var(--vandyke), var(--reseda) 55%, color-mix(in oklab, var(--reseda) 70%, white));
     -webkit-background-clip: text; background-clip: text; color: transparent;
   }
 
