@@ -18,6 +18,7 @@ import { ProductCard } from "@/components/site/ProductCard";
 import { CategoryRow } from "@/components/site/CategoryRow";
 import { QuickView } from "@/components/site/QuickView";
 import { Butterfly } from "@/components/site/Butterfly";
+import { Bow } from "@/components/site/Bow";
 import { products } from "@/lib/products";
 import type { Product } from "@/lib/store";
 
@@ -93,8 +94,10 @@ function HomePage() {
         </motion.div>
 
         <Particles count={22} />
-        <Butterfly className="absolute right-[8%] top-[18%] z-10 hidden md:block" size={84} />
-        <Butterfly className="absolute right-[22%] bottom-[22%] z-10" size={52} />
+        <Butterfly className="absolute right-[8%] top-[18%] z-10 hidden md:block" size={92} />
+        <Butterfly className="absolute right-[26%] bottom-[24%] z-10" size={56} />
+        <Bow className="absolute left-[6%] top-[22%] z-10 hidden md:block" size={84} />
+        <Bow className="absolute right-[12%] top-[55%] z-10" size={64} />
 
         <motion.div
           style={{ opacity }}
@@ -106,14 +109,14 @@ function HomePage() {
             transition={{ duration: 0.8 }}
             className="mb-6 inline-flex items-center gap-2 rounded-full border border-isabelline/25 bg-isabelline/10 px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-isabelline backdrop-blur"
           >
-            <Sparkles size={12} className="text-lavender" />
+            <Sparkles size={12} className="text-reseda" />
             Handmade Luxury Art
           </motion.div>
 
           <h1 className="max-w-3xl font-display text-5xl font-light leading-[1.05] tracking-tight text-balance text-isabelline sm:text-7xl md:text-[88px]">
             <SplitWords text="Turning Memories Into" />
             <br />
-            <span className="font-script italic text-lavender" style={{ fontWeight: 400 }}>
+            <span className="font-script italic text-reseda" style={{ fontWeight: 400 }}>
               Timeless Art
             </span>
           </h1>
@@ -324,7 +327,7 @@ function HomePage() {
         <Particles count={14} />
         <div className="relative mx-auto max-w-7xl px-6">
           <div className="mb-16 max-w-2xl">
-            <span className="text-[10px] font-medium uppercase tracking-[0.3em] text-lavender">Custom Order</span>
+            <span className="text-[10px] font-medium uppercase tracking-[0.3em] text-reseda">Custom Order</span>
             <Reveal as="h2" className="mt-3 font-display text-4xl font-light leading-tight tracking-tight sm:text-5xl">
               From your story to a sculpture, in four steps.
             </Reveal>
@@ -333,7 +336,7 @@ function HomePage() {
             {steps.map((s, i) => (
               <Reveal key={s.n} delay={i * 0.1}>
                 <div className="relative rounded-2xl border border-isabelline/15 bg-isabelline/5 p-7 backdrop-blur">
-                  <div className="font-script text-5xl text-lavender">{s.n}</div>
+                  <div className="font-script text-5xl text-reseda">{s.n}</div>
                   <h3 className="mt-3 font-display text-xl">{s.t}</h3>
                   <p className="mt-2 text-sm text-isabelline/75">{s.d}</p>
                   {i < steps.length - 1 && (
@@ -429,9 +432,9 @@ function HomePage() {
         <Reveal>
           <div className="relative overflow-hidden rounded-3xl bg-primary p-12 text-center text-primary-foreground sm:p-20">
             <Particles count={10} />
-            <Heart className="mx-auto mb-6 text-lavender" size={28} />
+            <Heart className="mx-auto mb-6 text-reseda" size={28} />
             <h2 className="mx-auto max-w-3xl font-display text-4xl font-light leading-tight tracking-tight sm:text-6xl">
-              Have a memory in mind? <span className="font-script italic text-lavender">Let’s sculpt it.</span>
+              Have a memory in mind? <span className="font-script italic text-reseda">Let’s sculpt it.</span>
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-sm text-primary-foreground/70 sm:text-base">
               Reach out on WhatsApp or send a quick brief — we’ll reply within 24 hours.
