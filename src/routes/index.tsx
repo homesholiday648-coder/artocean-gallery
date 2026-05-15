@@ -87,8 +87,8 @@ function HomePage() {
             transition={{ duration: 1.6, ease: "easeOut" }}
           />
           {/* Cinematic overlays for legibility */}
-          <div className="absolute inset-0 bg-gradient-to-r from-vandyke/95 via-vandyke/70 to-vandyke/30" />
-          <div className="absolute inset-0 bg-gradient-to-t from-vandyke via-vandyke/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-vandyke/85 via-vandyke/55 to-vandyke/10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-vandyke/90 via-vandyke/30 to-transparent" />
         </motion.div>
 
         <Particles count={22} />
