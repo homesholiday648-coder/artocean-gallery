@@ -93,6 +93,8 @@ function HomePage() {
         </motion.div>
 
         <Particles count={22} />
+        <Butterfly className="absolute right-[8%] top-[18%] z-10 hidden md:block" size={84} />
+        <Butterfly className="absolute right-[22%] bottom-[22%] z-10" size={52} />
 
         <motion.div
           style={{ opacity }}
