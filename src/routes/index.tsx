@@ -17,6 +17,7 @@ import { Reveal, SplitWords } from "@/components/site/Reveal";
 import { ProductCard } from "@/components/site/ProductCard";
 import { CategoryRow } from "@/components/site/CategoryRow";
 import { QuickView } from "@/components/site/QuickView";
+import { Butterfly } from "@/components/site/Butterfly";
 import { products } from "@/lib/products";
 import type { Product } from "@/lib/store";
 
