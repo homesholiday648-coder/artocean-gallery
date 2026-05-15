@@ -58,8 +58,8 @@
   --radius: 0.75rem;
 
   /* Brand — White / Baby Pink / Blue */
-  --reseda: oklch(0.58 0.16 250);         /* deep blue accent */
-  --lavender: oklch(0.86 0.075 8);        /* baby pink highlight #F8C8D8 */
+  --reseda: oklch(0.82 0.09 8);           /* baby pink highlight */
+  --lavender: oklch(0.62 0.16 250);       /* blue accent */
   --vandyke: oklch(0.27 0.09 255);        /* deep navy blue (dark sections) */
   --isabelline: oklch(1 0 0);              /* pure white */
 

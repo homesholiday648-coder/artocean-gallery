@@ -17,6 +17,7 @@ import { Reveal, SplitWords } from "@/components/site/Reveal";
 import { ProductCard } from "@/components/site/ProductCard";
 import { CategoryRow } from "@/components/site/CategoryRow";
 import { QuickView } from "@/components/site/QuickView";
+import { Butterfly } from "@/components/site/Butterfly";
 import { products } from "@/lib/products";
 import type { Product } from "@/lib/store";
 
@@ -92,6 +93,8 @@ function HomePage() {
         </motion.div>
 
         <Particles count={22} />
+        <Butterfly className="absolute right-[8%] top-[18%] z-10 hidden md:block" size={84} />
+        <Butterfly className="absolute right-[22%] bottom-[22%] z-10" size={52} />
 
         <motion.div
           style={{ opacity }}
